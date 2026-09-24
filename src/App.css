@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #121212;
+  color: #ffffff;
+}
+
+button {
+  font: inherit;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.game-container {
+  width: 100%;
+  max-width: 650px;
+  padding: 35px;
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.game-container h1 {
+  margin: 0 0 10px;
+  font-size: 34px;
+}
+
+.game-container > p {
+  margin: 0 0 25px;
+  color: #aaa;
+}
+
+.score-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.score-board > div {
+  padding: 15px;
+  background: #292929;
+  border-radius: 8px;
+}
+
+.score-board span {
+  display: block;
+  color: #aaa;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.score-board strong {
+  font-size: 28px;
+}
+
+.game-container h2 {
+  margin: 0 0 10px;
+}
+
+.game-container h2 + p {
+  margin: 0 0 25px;
+  color: #aaa;
+  text-transform: capitalize;
+}
+
+.game-board {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.choice-button {
+  width: 145px;
+  height: 140px;
+  border: 1px solid #444;
+  border-radius: 10px;
+  background: #292929;
+  color: white;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.2s;
+}
+
+.choice-button:hover:not(:disabled) {
+  background: #333;
+  border-color: #777;
+}
+
+.choice-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.choice-icon {
+  font-size: 45px;
+  margin-bottom: 12px;
+}
+
+.choice-name {
+  font-weight: bold;
+}
+
+.game-container > button {
+  padding: 11px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 7px;
+  background: #333;
+  color: white;
+  cursor: pointer;
+}
+
+.game-container > button:hover {
+  background: #444;
+}
+
+@media (max-width: 600px) {
+  .game-container {
+    padding: 25px 15px;
+  }
+
+  .game-container h1 {
+    font-size: 28px;
+  }
+
+  .game-board {
+    gap: 8px;
+  }
+
+  .choice-button {
+    width: 100px;
+    height: 120px;
+  }
+
+  .choice-icon {
+    font-size: 35px;
+  }
+}

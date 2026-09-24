@@ -1,4 +1,4 @@
-import ChoiceButton from "./ChoiseButton";
+import ChoiceButton from "./ChoiceButton";
 
 const GameBoard = ({ onPlay, disabled }) => {
   const choices = [
