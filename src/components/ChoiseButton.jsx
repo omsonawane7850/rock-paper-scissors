@@ -1,6 +1,10 @@
-const ChoiceButton = ({ choice, icon, onClick }) => {
+const ChoiceButton = ({ choice, icon, onClick, disabled }) => {
   return (
-    <button className="choice-button" onClick={() => onClick(choice)}>
+    <button
+      className="choice-button"
+      onClick={() => onClick(choice)}
+      disabled={disabled}
+    >
       <span className="choice-icon">{icon}</span>
 
       <span className="choice-name">

@@ -1,6 +1,6 @@
 import ChoiceButton from "./ChoiseButton";
 
-const GameBoard = ({ onPlay }) => {
+const GameBoard = ({ onPlay, disabled }) => {
   const choices = [
     {
       name: "rock",
@@ -24,6 +24,7 @@ const GameBoard = ({ onPlay }) => {
           choice={choice.name}
           icon={choice.icon}
           onClick={onPlay}
+          disabled={disabled}
         />
       ))}
     </div>
