@@ -1,10 +1,13 @@
 import "./App.css";
+
 import GameBoard from "./components/GameBoard";
+import useRockPaperScissors from "./hooks/useRockPaperScissors";
 
 function App() {
-  const handlePlay = (choice) => {
-    console.log(choice);
-  };
+  const {
+    userChoice,
+    playRound,
+  } = useRockPaperScissors();
 
   return (
     <main className="app">
@@ -13,7 +16,11 @@ function App() {
 
         <p>Choose your move</p>
 
-        <GameBoard onPlay={handlePlay} />
+        <GameBoard onPlay={playRound} />
+
+        {userChoice && (
+          <p>You selected: {userChoice}</p>
+        )}
       </div>
     </main>
   );
